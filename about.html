@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Web Page</title>
+  <title>Rohan Kusalkar - Web Developer</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,18 +12,48 @@
       padding: 0;
       background: linear-gradient(to right, #f8f9fa, #e9ecef);
       color: #333;
+      scroll-behavior: smooth;
     }
     header {
       background: #007bff;
       color: white;
       padding: 1rem 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    h1 {
-      margin: 0;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .profile {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #007bff;
     }
     section {
       padding: 1rem 2rem;
+    }
+    .hobbies, .contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
     }
     ul {
       list-style-type: square;
@@ -44,32 +74,60 @@
       bottom: 0;
       width: 100%;
     }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      color: #007bff;
+      font-size: 1.5rem;
+    }
+    .social-icons a:hover {
+      color: #0056b3;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Web Page</h1>
+    <h1>Rohan Kusalkar</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
-  <section>
+  <div class="profile">
+    <img src="https://via.placeholder.com/150" alt="Profile Picture">
+    <p>Web Developer | Tech Enthusiast | Lifelong Learner</p>
+  </div>
+  <section id="about">
     <h2>About Me</h2>
-    <p>My name is Rohan Kusalkar, and I am a web developer.</p>
-    <p>I enjoy creating websites and learning new technologies.</p>
+    <p>My name is Rohan Kusalkar, and I am a passionate web developer.</p>
+    <p>I enjoy creating websites, learning new technologies, and solving problems through code.</p>
   </section>
-  <section>
+  <section id="hobbies" class="hobbies">
     <h2>My Hobbies</h2>
     <ul>
       <li>Coding</li>
       <li>Reading</li>
       <li>Traveling</li>
+      <li>Photography</li>
     </ul>
   </section>
-  <section>
+  <section id="contact" class="contact">
     <h2>Contact Me</h2>
     <p>If you would like to get in touch, please email me at 
       <a href="mailto:rkusalkar78@gmail.com">
         <strong>rkusalkar78@gmail.com</strong>
       </a>.
     </p>
+    <div class="social-icons">
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+    </div>
   </section>
   <footer>
     <p>&copy; 2025 Rohan Kusalkar. All rights reserved.</p>
